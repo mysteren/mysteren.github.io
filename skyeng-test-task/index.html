@@ -6,15 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Loop 1 - Step 1</title>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-  <link rel="stylesheet" href="./styles.css" />
-  <script src=""></script>
+  <link rel="stylesheet" href="./styles.css?v1" />
+  <script src="./main.js?v1" defer></script>
 </head>
 <body>
 
   <div class="block-devices">
     <div class="block-devices__list">
         <div class="block-devices__elem">
-            <div class="block-devices__icon block-devices__icon--mobile"></div>
+            <div class="block-devices__icon block-devices__icon-mobile"></div>
             <div class="block-devices__title">
               Mobile
             </div>
@@ -28,7 +28,7 @@
             </div>
         </div>
         <div class="block-devices__elem">
-            <div class="block-devices__icon"></div>
+            <div class="block-devices__icon block-devices__icon-desktop"></div>
             <div class="block-devices__title">
               Desktop
             </div>
@@ -42,12 +42,12 @@
             </div>
         </div>
         <div class="block-devices__elem">
-            <div class="block-devices__icon"></div>
+            <div class="block-devices__icon block-devices__icon-tv"></div>
             <div class="block-devices__title">
               TV
             </div>
             <div class="block-devices__text">
-              Watch your favorite series at home on large screen with our TV application  
+              Watch your favorite series at home on large screen with our TV application. 
             </div>
             <div class="block-devices__price">
                 <span class="block-devices__dollar">$</span>
@@ -71,8 +71,22 @@
 
     Good luck and have fun!
   -->
-  <div class="confirm-modal">
+  <div id="modals-block" class="modals modals--hidden modals--fadeout">
 
+      <div class="overlay"></div>
+
+      <div class="confirm-modal hidden">
+          <div class="confirm-modal__close-button"></div>
+          <div class="confirm-modal__header">
+            <h3 class="confirm-modal__title">Confirmation</h3>
+          </div>
+          <div class="confirm-model__body">
+          </div>
+          <div class="confirm-modal__footer">
+            <button class="confirm-modal__submit-button">Confirm and pay</button>
+          </div>
+      </div>
   </div>
+  
 </body>
 </html>
