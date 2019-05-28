@@ -5,8 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // открыть модльник подтверждения
     function openConfirmModal() {
-        modalsBlock.classList.remove('modals--hidden');
-        modalsBlock.classList.remove('modals--fadeout');
+        modalsBlock.classList.remove('modals--hidden', 'modals--fadeout');
     }
 
     // закрыть модальник подтверждения
