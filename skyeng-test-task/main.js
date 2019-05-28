@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
     // обработка нажатия на оверлей и кнопку закрытия в модальном окне
     Array.from(modalsBlock.querySelectorAll('.overlay, .confirm-modal__close-button')).forEach(elem => {
         elem.addEventListener('click', function(event) {
-            conrifmModalBody.in
             closeConfirmModal();
         });
     });
@@ -37,5 +36,20 @@ document.addEventListener("DOMContentLoaded", function() {
             openConfirmModal();
         });
     });
+
+    // нажатие кнопки Escape
+    document.onkeydown = function(evt) {
+        evt = evt || window.event;
+        var isEscape = false;
+        if ("key" in evt) {
+            isEscape = (evt.key === "Escape" || evt.key === "Esc");
+        } else {
+            isEscape = (evt.keyCode === 27);
+        }
+
+        if (isEscape) {
+            closeConfirmModal();
+        }
+    };
 
 });
