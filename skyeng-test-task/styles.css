@@ -118,12 +118,9 @@ body {
     opacity: 1;   
 }
 
-.modals--hidden {
-    display:  none;
-}
-
 .modals--fadeout { 
     opacity: 0;
+    pointer-events: none;
 }
 
 .overlay {
